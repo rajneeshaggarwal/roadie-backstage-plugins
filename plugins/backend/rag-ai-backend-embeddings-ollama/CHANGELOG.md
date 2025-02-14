@@ -1,4 +1,4 @@
-# @roadiehq/rag-ai-backend-embeddings-openai
+# @roadiehq/rag-ai-backend-embeddings-ollama
 
 ## 0.4.1
 
@@ -18,7 +18,7 @@
 
 ### Minor Changes
 
-- 6da7661: Add support for specifying a custom OpenAI baseURL via config
+- 6da7661: Add support for specifying a custom Ollama baseURL via config
 
 ## 0.2.12
 
@@ -39,7 +39,7 @@
 
 ### Patch Changes
 
-- 2718d81: Add link to Roadie in README
+- 2718d81: Updated README with configuration instructions
 - Updated dependencies [2718d81]
   - @roadiehq/rag-ai-backend-retrieval-augmenter@1.0.3
   - @roadiehq/rag-ai-node@0.1.7
@@ -88,7 +88,7 @@
 
 ### Patch Changes
 
-- 9768baa: Added config parameter `ai.embeddings.concurrencyLimit` for limiting concurrency during creating TechDocs embeddings
+- 9768baa: Added config parameter `ai.embeddings.concurrencyLimit` for limiting concurrency during creating embeddings
 - 9768baa: Renamed type `SplitterOptions` to `AugmentationOptions`
 - Updated dependencies [9768baa]
 - Updated dependencies [ed73691]
@@ -125,7 +125,7 @@
 
 ### Minor Changes
 
-- 7fa2871: Fixed rag-ai compatiblity with API requests authentication and service-to-service auth enabled apps
+- 7fa2871: Fixed rag-ai compatibility with API requests authentication and service-to-service auth enabled apps
 
 ### Patch Changes
 
@@ -136,19 +136,13 @@
 
 ### Minor Changes
 
-- 7b468fa: Open source and release Roadie RAG AI Backstage Plugin
+- 7b468fa: Initial release of Ollama embeddings backend module for Backstage RAG AI Plugin
 
-  This commit introduces the Roadie RAG AI plugin to Backstage. It adds constructs, types and interfaces to enable additional enhancement of RAG AI functionality of Backstage entities, tech-docs, API docs and Tech Insights fact data.
+  This commit introduces the Ollama embeddings backend module for the RAG AI plugin. It adds constructs, types and interfaces to enable embeddings generation using Ollama models.
 
   - Includes the initial end-to-end configuration
-  - Adds frontend modal display to handle query UI
-  - Introduces and document AI assistant configurations
-  - Adds support for vendor-specific embedding implementations for AWS Bedrock and OpenAI
+  - Adds support for custom Ollama endpoints
+  - Introduces Ollama model configuration options
+  - Adds support for request timeout and embedding dimensions configuration
 
-  Contains necessary documentation for new users configure and start using the functionality as well as enhance the integration compatibility with the existing Backstage infrastructure.
-
-### Patch Changes
-
-- Updated dependencies [7b468fa]
-  - @roadiehq/rag-ai-backend-retrieval-augmenter@0.1.0
-  - @roadiehq/rag-ai-node@0.1.0
+  Contains necessary documentation for new users to configure and start using the functionality with their existing Backstage infrastructure.
